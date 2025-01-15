@@ -222,7 +222,7 @@ local telescope = {
 }
 
 local function highlight(statement)
-	for name, setting in pairs(statement) do
+	for _, setting in pairs(statement) do
 		vim.api.nvim_set_hl(0, setting[1], setting[2])
 	end
 end
